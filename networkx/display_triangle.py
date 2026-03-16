@@ -18,4 +18,5 @@ G.add_edge("B", "C")
 nx.draw(G, with_labels=True)
 
 # Show graph window
+plt.title("A simple graph")
 plt.show()

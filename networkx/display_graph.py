@@ -25,4 +25,5 @@ G.add_edges_from(edges)
 nx.draw(G, with_labels=True)
 
 # Show graph window
+plt.title("A graph with 6 vertices")
 plt.show()
