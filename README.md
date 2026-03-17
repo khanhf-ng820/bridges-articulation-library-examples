@@ -12,3 +12,5 @@ To run a Python file, run the following command:
 ```bash
 python /path/to/file.py
 ```
+
+You can generate random graphs to write to the `.txt` files using [this website](https://mikhad.github.io/graph-builder/#2023).

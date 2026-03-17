@@ -4,46 +4,21 @@ import matplotlib.pyplot as plt
 # Create graph
 G = nx.Graph()
 
-edges = [
-    ("A", "B"),
-    ("A", "C"),
-    ("B", "C"),
-    ("B", "D"),
-    ("C", "E"),
-    ("D", "E"),
-    ("D", "F"),
-    ("E", "G"),
-    ("F", "G"),
-    ("G", "H"),
-    ("H", "I"),
-    ("H", "J"),
-    ("I", "J"),
-    ("J", "K"),
-    ("K", "L"),
-    ("K", "M"),
-    ("L", "M"),
-    ("M", "N"),
-    ("N", "O"),
-    ("O", "P"),
-    ("P", "Q"),
-    ("Q", "R"),
-    ("R", "S"),
-    ("S", "T"),
-    ("T", "U"),
-    ("U", "V"),
-    ("V", "W"),
-    ("W", "X"),
-    ("X", "Y"),
-    ("Y", "Z"),
-    ("E", "K"),
-    ("G", "M"),
-    ("C", "H"),
-    ("F", "J"),
-    ("L", "Q"),
-    ("N", "S"),
-    ("P", "U"),
-    ("R", "W")
-]
+
+edges = []
+
+filename = "graph100.txt"
+
+try:
+    with open(filename, 'r') as file:
+        for line in file:
+            vertices = line.strip().split(' ')
+            edges.append((vertices[0], vertices[1]))
+except FileNotFoundError:
+    print(f"Error: The file '{filename}' was not found.")
+except IOError:
+    print(f"Error reading the file '{filename}'.")
+
 G.add_edges_from(edges)
 
 # Find bridges and articulation points

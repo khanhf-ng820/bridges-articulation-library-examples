@@ -63,7 +63,7 @@ nx.draw(
     with_labels=True,
     node_color=node_colors,
     edge_color=edge_colors,
-    node_size=2000,
+    node_size=300,
     font_size=12
 )
 
