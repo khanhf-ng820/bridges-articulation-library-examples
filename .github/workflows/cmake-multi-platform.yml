@@ -87,7 +87,7 @@ jobs:
         git clone https://github.com/microsoft/vcpkg.git
         cd vcpkg
         .\bootstrap-vcpkg.bat
-        .\vcpkg install boost
+        .\vcpkg install boost-graph
 
     # # Optional: integrate vcpkg with CMake (Windows)
     # - name: Integrate vcpkg
