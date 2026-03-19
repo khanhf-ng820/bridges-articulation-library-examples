@@ -48,8 +48,8 @@ nx.draw(
     with_labels=True,
     node_color=node_colors,
     edge_color=edge_colors,
-    node_size=300,
-    font_size=12
+    node_size=200,
+    font_size=8
 )
 
 plt.title("Bridges (Red edges) and Articulation Points (Red vertices)")
