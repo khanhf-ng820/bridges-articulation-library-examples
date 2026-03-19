@@ -82,16 +82,17 @@ jobs:
     # Windows (vcpkg)
     - name: Install Boost (Windows)
       if: runner.os == 'Windows'
+      working-directory: ${{ github.workspace }}
       run: |
         git clone https://github.com/microsoft/vcpkg.git
         cd vcpkg
         .\bootstrap-vcpkg.bat
         .\vcpkg install boost
 
-    # Optional: integrate vcpkg with CMake (Windows)
-    - name: Integrate vcpkg
-      if: runner.os == 'Windows'
-      run: .\vcpkg\vcpkg integrate install
+    # # Optional: integrate vcpkg with CMake (Windows)
+    # - name: Integrate vcpkg
+    #   if: runner.os == 'Windows'
+    #   run: .\vcpkg\vcpkg integrate install
 
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
