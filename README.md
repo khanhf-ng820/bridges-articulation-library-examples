@@ -12,7 +12,7 @@ To run a Python file, run the following command:
 python /path/to/file.py
 ```
 
-You can generate random graphs to write to the `.txt` files using [this website](https://mikhad.github.io/graph-builder/#2023).
+<!-- You can generate random graphs to write to the `.txt` files using [this website](https://mikhad.github.io/graph-builder/#2023). -->
 
 # How to run (Boost Graph Library in C++)
 ## 1. Prerequisites
