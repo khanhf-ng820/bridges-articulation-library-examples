@@ -80,7 +80,7 @@ jobs:
         brew install boost
 
     # Windows (vcpkg)
-    - name: Install Boost (Windows)
+    - name: Install Boost Graph Library (Windows)
       if: runner.os == 'Windows'
       working-directory: ${{ github.workspace }}
       run: |
