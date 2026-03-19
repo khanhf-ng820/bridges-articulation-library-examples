@@ -112,9 +112,10 @@ jobs:
       #   -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}
       #   -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
       run: |
-        cmake -B build ^
-        -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake ^
-        -DCMAKE_BUILD_TYPE=Release
+        cmake -B ${{ steps.strings.outputs.build-output-dir }} `
+          -S ${{ github.workspace }}/bgl `
+          -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake `
+          -DCMAKE_BUILD_TYPE=Release
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
