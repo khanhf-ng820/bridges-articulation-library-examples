@@ -23,7 +23,7 @@ python /path/to/file.py
 ## 2. Install Boost
 ### macOS:
 
-Install Homebrew using the following command in the Terminal:
+If you haven't, install Homebrew using the following command in the Terminal:
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -58,10 +58,19 @@ vcpkg integrate install
 
 ## 3. Build the program
 Go to the `bgl/` folder and enter the following in the Terminal:
+### macOS & Ubuntu/Debian-based Linux distros:
 ```bash
 mkdir build
 cd build
 cmake ..
+make
+./main
+```
+### Windows:
+```powershell
+mkdir build
+cd build
+cmake .. -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
 make
 ./main
 ```
