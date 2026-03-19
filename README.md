@@ -46,7 +46,7 @@ cd vcpkg
 bootstrap-vcpkg.bat
 ```
 
-Install Boost:
+Install Boost: *(Note: This may take a while.)*
 ```powershell
 vcpkg install boost
 ```
